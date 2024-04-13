@@ -4,6 +4,8 @@ import { theme } from './Data/theme';
 import Navbar from './Components/Navbar/Navbar.component';
 import GlobalStyles from './StyledComponentsUtils/Global.styles';
 import Home from './Components/Home/Home.component';
+import Skills from './Components/Skills/Skills.component';
+import Projects from './Components/Projects/Projects.component';
 
 function App() {
   return (
@@ -11,7 +13,8 @@ function App() {
       <GlobalStyles />
       <div className="App">
           <Navbar />
-          <Home />
+          <Skills />
+          <Projects /> 
       </div>
     </ThemeProvider>
   );
