@@ -5,15 +5,19 @@ import {
 } from "../../StyledComponentsUtils/Animation.styles";
 
 const NavbarComp = styled.nav`
-  height: ${props => props.theme.navbarHt};
-  border: 1px solid blue;
+  position: fixed;
+  padding-top: 2rem;
+  width: 100%;
+  z-index: 4;
+  height: ${(props) => props.theme.navbarHt};
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 0rem 2rem;
 `;
 
-const NavbarH2Tag = styled.h2`
+const NavbarH1Tag = styled.h1`
+font-size: 2.5rem;
   position: relative;
   margin-left: 2rem;
   opacity: 0;
@@ -42,4 +46,4 @@ const NavbarAnchorTag = styled.a`
   }
 `;
 
-export { NavbarComp, NavbarH2Tag, NavbarRightDivTag, NavbarAnchorTag };
+export { NavbarComp, NavbarH1Tag, NavbarRightDivTag, NavbarAnchorTag };

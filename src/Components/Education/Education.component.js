@@ -39,7 +39,7 @@ const Education = () => {
       <EducationTimelineBox>
         {educationDetails.map((ele, idx) => {
           return (
-            <EducationTimelineContent>
+            <EducationTimelineContent key={idx}>
               <EContent>
                 <div className="year">
                   <i className="bx bxs-calendar"></i>

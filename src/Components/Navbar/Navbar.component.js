@@ -1,9 +1,7 @@
 import React from "react";
 import {
-  NavbarAnchorTag,
   NavbarComp,
-  NavbarH2Tag,
-  NavbarRightDivTag,
+  NavbarH1Tag
 } from "./Navbar.styles";
 
 const Navbar = () => {
@@ -17,14 +15,14 @@ const Navbar = () => {
 
   return (
     <NavbarComp>
-      <NavbarH2Tag>Ankit Raj</NavbarH2Tag>
-      <NavbarRightDivTag>
+      <NavbarH1Tag>AR Code Corner</NavbarH1Tag>
+      {/* <NavbarRightDivTag>
         {menuItems.map((item, index) => (
           <NavbarAnchorTag key={index} $index={index}>
             {item}
           </NavbarAnchorTag>
         ))}
-      </NavbarRightDivTag>
+      </NavbarRightDivTag> */}
     </NavbarComp>
   );
 };

@@ -6,7 +6,6 @@ import {
 } from "../../StyledComponentsUtils/Animation.styles";
 
 const HomeSectionComp = styled.section`
-  border: 1px solid green;
   height: calc(100vh - ${(props) => props.theme.navbarHt});
   display: flex;
   position: relative;
