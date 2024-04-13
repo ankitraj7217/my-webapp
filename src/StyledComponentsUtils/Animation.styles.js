@@ -12,7 +12,7 @@ const slideRight = (leftVal) => keyframes`
     }
 `;
 
-const slideDown = (topVal) =>  keyframes`
+const slideDown = (topVal) => keyframes`
     0% {
         transform: translateY(${topVal});
         opacity: 0;
@@ -22,7 +22,7 @@ const slideDown = (topVal) =>  keyframes`
         transform: translateY(0);
         opacity: 1;
     }
-`
+`;
 
 const slideTop = (downVal) => keyframes`
   0% {
@@ -58,6 +58,32 @@ const zoomIn = keyframes`
     }
 `;
 
+const borderAnimation = (borderColor, borderWidth) => keyframes`
+  0% {
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+  }
+  25% {
+    border-top: ${borderWidth} solid ${borderColor}; /* Adjust border color and width as needed */
+  }
+  50% {
+    border-top: ${borderWidth} solid ${borderColor};
+    border-right: ${borderWidth} solid ${borderColor};
+  }
+  75% {
+    border-top: ${borderWidth} solid ${borderColor};
+    border-right: ${borderWidth} solid ${borderColor};
+    border-bottom: ${borderWidth} solid ${borderColor};
+  }
+  100% {
+    border-top: ${borderWidth} solid ${borderColor};
+    border-right: ${borderWidth} solid ${borderColor};
+    border-bottom: ${borderWidth} solid ${borderColor};
+    border-left: ${borderWidth} solid ${borderColor};
+  }
+`;
 
 
-export { slideRight, slideDown, slideTop, slideLeft, zoomIn };
+export { slideRight, slideDown, slideTop, slideLeft, zoomIn, borderAnimation };

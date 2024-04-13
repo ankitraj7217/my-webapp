@@ -8,6 +8,8 @@ import Skills from './Components/Skills/Skills.component';
 import Projects from './Components/Projects/Projects.component';
 import Experience from './Components/Experience/Experience.component';
 import Education from './Components/Education/Education.component';
+import Certifications from './Components/Certifications/Certifications.component';
+import Achievements from './Components/Achievements/Achievements.component';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
       <GlobalStyles />
       <div className="App">
           <Navbar />
-          <Education />
+          <Achievements />
       </div>
     </ThemeProvider>
   );
