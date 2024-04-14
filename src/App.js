@@ -1,14 +1,13 @@
-import { ThemeProvider } from "styled-components";
 import "./App.css";
-import { theme } from "./Data/theme";
 import Navbar from "./Components/Navbar/Navbar.component";
 import GlobalStyles from "./StyledComponentsUtils/Global.styles";
 import Body from "./Components/Body/Body.component";
 import ScrollContextProvider from "./Context/ScrollContext/Scroll.provider";
+import ThemeContextProvider from "./Context/ThemeContext/Theme.provider";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeContextProvider>
       <ScrollContextProvider>
         <GlobalStyles />
         <div className="App">
@@ -16,7 +15,7 @@ function App() {
           <Body />
         </div>
       </ScrollContextProvider>
-    </ThemeProvider>
+    </ThemeContextProvider>
   );
 }
 

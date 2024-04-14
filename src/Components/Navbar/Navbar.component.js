@@ -1,17 +1,9 @@
 import React from "react";
-import {
-  NavbarComp,
-  NavbarH1Tag
-} from "./Navbar.styles";
+import { NavbarComp, NavbarH1Tag, NavbarTheme } from "./Navbar.styles";
+import { useThemeContext } from "../../Context/ThemeContext/Theme.provider";
 
 const Navbar = () => {
-  const menuItems = [
-    "Home",
-    "Experience",
-    "Skills",
-    "Education",
-    "Certifications",
-  ];
+  const { theme, setTheme } = useThemeContext();
 
   return (
     <NavbarComp>
@@ -23,6 +15,14 @@ const Navbar = () => {
           </NavbarAnchorTag>
         ))}
       </NavbarRightDivTag> */}
+      <NavbarTheme>
+        <i
+          className={`bx bxs-${theme.isDark ? "sun" : "moon"}`}
+          onClick={() =>
+            setTheme((prevTheme) => ({ ...prevTheme, isDark: !theme.isDark }))
+          }
+        ></i>
+      </NavbarTheme>
     </NavbarComp>
   );
 };

@@ -6,7 +6,6 @@ import {
 
 const NavbarComp = styled.nav`
   position: fixed;
-  padding-top: 2rem;
   width: 100%;
   z-index: 4;
   height: ${(props) => props.theme.navbarHt};
@@ -17,7 +16,7 @@ const NavbarComp = styled.nav`
 `;
 
 const NavbarH1Tag = styled.h1`
-font-size: 2.5rem;
+  font-size: 4rem;
   position: relative;
   margin-left: 2rem;
   opacity: 0;
@@ -46,4 +45,17 @@ const NavbarAnchorTag = styled.a`
   }
 `;
 
-export { NavbarComp, NavbarH1Tag, NavbarRightDivTag, NavbarAnchorTag };
+const NavbarTheme = styled.div`
+  position: absolute;
+  right: 4rem;
+  font-size: 2rem;
+  cursor: pointer;
+`;
+
+export {
+  NavbarComp,
+  NavbarH1Tag,
+  NavbarRightDivTag,
+  NavbarAnchorTag,
+  NavbarTheme,
+};

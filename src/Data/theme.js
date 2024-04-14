@@ -1,4 +1,4 @@
-export const theme = {
+export const customTheme = {
     colors: {
         dark: {
             bgColorPrimary: "#282c34",
@@ -11,5 +11,6 @@ export const theme = {
         }
     },
     isDark: true,
-    navbarHt: "4rem"
+    navbarHt: "8rem",
+    isMobile: false
 }

@@ -38,6 +38,10 @@ const Home = () => {
     setScrollEnd({ ...scrollEnd, isHome: true });
   });
 
+  const handleRedirect = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <HomeSectionComp>
       <HomeLeftTag>
@@ -76,7 +80,10 @@ const Home = () => {
             const SMIcon = item.icon;
             return (
               <HomeSMIcTag key={idx} color="#0ef" $index={idx}>
-                <i className={`bx bxl-${SMIcon}`}></i>
+                <i
+                  className={`bx bxl-${SMIcon}`}
+                  onClick={() => handleRedirect(item.link)}
+                ></i>
               </HomeSMIcTag>
             );
           })}

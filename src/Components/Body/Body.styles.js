@@ -2,5 +2,5 @@ import styled from "styled-components";
 
 export const BodyComponent = styled.div`
     position: relative;
-    top: 4rem;
+    top: ${(props) => props.theme.navbarHt};
 `;

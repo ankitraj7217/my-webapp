@@ -1,10 +1,14 @@
 import { useEffect } from "react";
+import { useThemeContext } from "../Context/ThemeContext/Theme.provider";
 
 function useScrollEnd(callback) {
+  const { theme } = useThemeContext();
+
   useEffect(() => {
     const handleScroll = () => {
       // Calculate the adjusted inner height
-      const adjustedInnerHeight = window.innerHeight - 4 * 16; // Convert rem to pixels
+      const adjustedInnerHeight =
+        window.innerHeight - parseInt(theme.navbarHt, 10) * 16; // Convert rem to pixels
 
       if (adjustedInnerHeight + window.scrollY >= document.body.offsetHeight) {
         callback();
