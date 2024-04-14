@@ -1,4 +1,6 @@
 import React from "react";
+import { useScrollContext } from "../../Context/ScrollContext/Scroll.provider";
+import useScrollEnd from "../../Utils/useScrollEnd";
 import {
   EContent,
   ESpanAnimate,
@@ -32,6 +34,13 @@ const experienceDetails = [
 ];
 
 const Experience = () => {
+  const { scrollEnd, setScrollEnd } = useScrollContext();
+
+  useScrollEnd(() => {
+    setScrollEnd({ ...scrollEnd, isExperience: true });
+  });
+
+
   return (
     <ExperienceSectionComp>
       <ExperienceHeader>

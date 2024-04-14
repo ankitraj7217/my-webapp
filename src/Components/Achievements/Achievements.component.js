@@ -6,11 +6,11 @@ import {
 } from "./Achievements.styles";
 
 const achievementsDetails = [
-  "Ranked 5038 worldwide on SPOJ coding platform among over a million users",
-  "Recognized as a Spotlight Performer in Q1 2022-23 at work",
-  "Graduated with distinction from university",
-  "Awarded a scholar badge in higher secondary school",
-  "Holds a green belt in Karate",
+  "Ranked 5044 worldwide on SPOJ coding platform among over a million users.",
+  "Recognized as a Spotlight Performer in Q1 2022-23 at work.",
+  "Graduated with distinction from university.",
+  "Awarded a scholar badge in higher secondary school.",
+  "Holds a green belt in Karate.",
 ];
 
 const Achievements = () => {

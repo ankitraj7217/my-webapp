@@ -11,8 +11,11 @@ import {
   HomeSMIcTag,
   HomeSectionComp,
 } from "./Home.styles";
+import useScrollEnd from "../../Utils/useScrollEnd";
+import { useScrollContext } from "../../Context/ScrollContext/Scroll.provider";
 
 const Home = () => {
+  const { scrollEnd, setScrollEnd } = useScrollContext();
   const socialMedia = [
     {
       name: "Github",
@@ -24,7 +27,16 @@ const Home = () => {
       link: "https://in.linkedin.com/",
       icon: "linkedin",
     },
+    {
+      name: "stackoverflow",
+      link: "https://stackoverflow.com/users/9774684/kenpachi-zaraki",
+      icon: "stack-overflow",
+    },
   ];
+
+  useScrollEnd(() => {
+    setScrollEnd({ ...scrollEnd, isHome: true });
+  });
 
   return (
     <HomeSectionComp>
@@ -49,10 +61,15 @@ const Home = () => {
           </span>
         </HomeH3Tag>
         <HomePTag>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, quod
-          itaque aut sunt reiciendis amet laboriosam eum incidunt recusandae
-          aliquid culpa explicabo magni, corporis consequatur molestias quam
-          impedit ipsam officiis?
+          I am a full-stack developer with over 3.5 years of professional
+          experience. Throughout my career, I have spearheaded numerous
+          projects, serving as the primary liaison for successful project
+          deliveries. My expertise spans a wide array of technologies, enabling
+          me to adapt swiftly to evolving project requirements. Moreover, I have
+          had the privilege of mentoring junior developers, assisting them in
+          their journey to master React and other essential skills. Feel free to
+          explore my profile below or connect with me on LinkedIn for further
+          insights.
         </HomePTag>
         <HomeDivSMTag>
           {socialMedia.map((item, idx) => {

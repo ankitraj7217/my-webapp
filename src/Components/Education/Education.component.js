@@ -1,4 +1,6 @@
 import React from "react";
+import { useScrollContext } from "../../Context/ScrollContext/Scroll.provider";
+import useScrollEnd from "../../Utils/useScrollEnd";
 import {
   EducationSectionComp,
   EducationHeader,
@@ -30,6 +32,13 @@ const educationDetails = [
 ];
 
 const Education = () => {
+  const { scrollEnd, setScrollEnd } = useScrollContext();
+
+  useScrollEnd(() => {
+    setScrollEnd({ ...scrollEnd, isEducation: true });
+  });
+
+
   return (
     <EducationSectionComp>
       <EducationHeader>

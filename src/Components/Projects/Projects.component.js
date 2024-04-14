@@ -1,4 +1,6 @@
 import React from "react";
+import { useScrollContext } from "../../Context/ScrollContext/Scroll.provider";
+import useScrollEnd from "../../Utils/useScrollEnd";
 import {
   ProjectIndComp,
   ProjectsDetailsEle,
@@ -7,6 +9,13 @@ import {
 } from "./Projects.style";
 
 const Projects = () => {
+  const { scrollEnd, setScrollEnd } = useScrollContext();
+
+  useScrollEnd(() => {
+    setScrollEnd({ ...scrollEnd, isSkillsProjects: true });
+  });
+
+
   const projects = [
     {
       name: "Khelotsu",

@@ -2,8 +2,3 @@
     display: flex;
     flex-direction: column;
 }
-
-.App-body {
-    position: relative;
-    top: 4rem;
-}

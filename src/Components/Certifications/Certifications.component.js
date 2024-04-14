@@ -1,4 +1,6 @@
 import React from "react";
+import { useScrollContext } from "../../Context/ScrollContext/Scroll.provider";
+import useScrollEnd from "../../Utils/useScrollEnd";
 import {
   CertificationBox,
   CertificationsDetails,
@@ -54,6 +56,12 @@ const certificationDetails = [
 ];
 
 const Certifications = () => {
+  const { scrollEnd, setScrollEnd } = useScrollContext();
+
+  useScrollEnd(() => {
+    setScrollEnd({ ...scrollEnd, isCertifications: true });
+  });
+
   return (
     <CertificationsSectionComp>
       <CertificationsHeader>Certifications</CertificationsHeader>
