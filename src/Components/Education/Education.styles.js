@@ -21,7 +21,12 @@ export const ESpanAnimate = styled.span`
   animation-delay: ${(props) => 0.5 * props.$timing}s;
 `;
 
-export const EducationHeader = styled(GenericH1)``;
+export const EducationHeader = styled(GenericH1)`
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+`;
 
 export const EducationTimelineBox = styled.div`
   flex: 1 1 75vw;
