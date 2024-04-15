@@ -4,16 +4,30 @@ import {
   slideTop,
   zoomIn,
 } from "../../StyledComponentsUtils/Animation.styles";
+import { GenericH1 } from "../../StyledComponentsUtils/Generic.styles";
 
 const HomeSectionComp = styled.section`
   height: calc(100vh - ${(props) => props.theme.navbarHt});
   display: flex;
   position: relative;
+
+  // can be made dynamic too -> Good Practice to have.
+  @media (max-width: 767px) { 
+    flex-direction: column-reverse;
+  }
 `;
 
 const HomeLeftTag = styled.div`
   width: 60%;
   margin: auto 2rem;
+
+  @media (max-width: 767px) { 
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    padding: 0rem 2rem;
+    margin: 0rem;
+  }
 `;
 
 const HomeH3Tag = styled.h3`
@@ -37,10 +51,14 @@ const HomeH3Tag = styled.h3`
       animation-delay: 0.7s;
     }
   }
+
+  @media (max-width: 767px) { 
+    font-size: 1rem;
+  }
 `;
 
-const HomeH1Tag = styled.h1`
-  font-size: 4rem;
+const HomeH1Tag = styled(GenericH1)`
+  display: block;
   opacity: 0;
   animation: ${slideLeft("25%")} 1s ease-in-out forwards;
   animation-delay: 0.7s;
@@ -52,6 +70,10 @@ const HomePTag = styled.p`
   opacity: 0;
   animation: ${slideTop("50%")} 1s ease-in-out forwards;
   animation-delay: 0.7s;
+
+  @media (max-width: 767px) { 
+    font-size: 0.85rem;
+  }
 `;
 
 const HomeDivSMTag = styled.div`
@@ -67,7 +89,7 @@ const HomeSMIcTag = styled.a`
   background: transparent;
   border: 2px solid #0ef;
   border-radius: 50%;
-  font-size: 1%.5;
+  font-size: 1.5rem;
   color: #0ef;
   text-decoration: none;
   margin: 0px;
@@ -95,6 +117,10 @@ const HomeSMIcTag = styled.a`
     }
     box-shadow: 0 0 20px #0ef;
   }
+
+  @media (max-width: 767px) { 
+    font-size: 1rem;
+  }
 `;
 
 const HomeRightTag = styled.div`
@@ -107,6 +133,19 @@ const HomeRightTag = styled.div`
     opacity: 0;
     animation: ${zoomIn} 2s ease-in-out forwards;
     animation-delay: 0.7s;
+  }
+
+  @media (max-width: 767px) { 
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+    }
   }
 `;
 

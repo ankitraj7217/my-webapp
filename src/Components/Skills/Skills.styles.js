@@ -1,13 +1,14 @@
 import styled, { keyframes } from "styled-components";
+import { GenericH1 } from "../../StyledComponentsUtils/Generic.styles";
 
 const SkillsSectionComp = styled.section`
-    margin: 5rem 0rem;
+  margin: 5rem 0rem;
 `;
 
-const SkillsHeader = styled.h1`
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
+const SkillsHeader = styled(GenericH1)`
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
 `;
 
 const SkillsScrollSection = styled.section`
@@ -46,4 +47,10 @@ const SkilledEleTag = styled.div`
   padding: 1rem;
 `;
 
-export { SkillsSectionComp, SkillsHeader,  SkillsScrollSection, SkillsScrollEle, SkilledEleTag };
+export {
+  SkillsSectionComp,
+  SkillsHeader,
+  SkillsScrollSection,
+  SkillsScrollEle,
+  SkilledEleTag,
+};

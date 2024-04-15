@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import {
   slideDown,
+  slideLeft,
   slideRight,
 } from "../../StyledComponentsUtils/Animation.styles";
+import { GenericH1 } from "../../StyledComponentsUtils/Generic.styles";
 
 const NavbarComp = styled.nav`
   position: fixed;
@@ -10,13 +12,14 @@ const NavbarComp = styled.nav`
   z-index: 4;
   height: ${(props) => props.theme.navbarHt};
   display: flex;
-  justify-content: center;
+  justify-content: ${(props) => props.theme.isMobile ? "space-between" : "center"};
+  padding: 0 0.5rem;
   align-items: center;
-  padding: 0rem 2rem;
+  border-bottom: 1px solid ${(props) => props.theme.isDark ? "rgba(255, 255, 255, 0.1)" : "rgba(0, 0, 0, 0.1)"};
 `;
 
-const NavbarH1Tag = styled.h1`
-  font-size: 4rem;
+const NavbarH1Tag = styled(GenericH1)`
+  display: block;
   position: relative;
   margin-left: 2rem;
   opacity: 0;
@@ -48,8 +51,15 @@ const NavbarAnchorTag = styled.a`
 const NavbarTheme = styled.div`
   position: absolute;
   right: 4rem;
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-size: ${(props) => props.theme.isMobile ? "1rem" : "2rem"};
   cursor: pointer;
+  animation: ${slideLeft("50%")} 2s ease-in-out forwards;
+
+  @media (max-width: 767px) {
+    right: 2rem;
+   }
 `;
 
 export {

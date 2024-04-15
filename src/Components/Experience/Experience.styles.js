@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { GenericH1 } from "../../StyledComponentsUtils/Generic.styles";
 
 export const ExperienceSectionComp = styled.section`
   margin: 2rem auto;
@@ -11,21 +12,16 @@ const showRightKeyFrame = keyframes`
 `;
 
 export const ESpanAnimate = styled.span`
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 105%;
-    height: 100%;
-    animation: ${showRightKeyFrame} 5s ease forwards;
-    animation-delay: ${(props) => 0.5 * props.$timing}s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 105%;
+  height: 100%;
+  animation: ${showRightKeyFrame} 5s ease forwards;
+  animation-delay: ${(props) => 0.5 * props.$timing}s;
 `;
 
-export const ExperienceHeader = styled.h1`
-  font-size: 4rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
-`;
+export const ExperienceHeader = styled(GenericH1)``;
 
 export const ExperienceTimelineBox = styled.div`
   flex: 1 1 75vw;
@@ -35,6 +31,10 @@ export const ExperienceTimelineBox = styled.div`
   padding-left: 2rem; // check left of timeline content if this is changed
   border-left: 2px solid #0ef;
   position: relative;
+
+  @media (max-width: 767px) {
+    max-width: 90vw;
+  }
 `;
 
 export const ExperienceTimelineContent = styled.div`
@@ -72,8 +72,18 @@ export const EContent = styled.div`
     }
   }
 
+  h4 {
+    @media (max-width: 767px) {
+      font-size: 0.9rem;
+    }
+  }
+
   ul {
     font-size: 1rem;
     padding-left: 0.75rem;
+
+    @media (max-width: 767px) {
+      font-size: 0.85rem;
+    }
   }
 `;

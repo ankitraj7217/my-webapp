@@ -1,14 +1,11 @@
 import styled from "styled-components";
+import { GenericH1 } from "../../StyledComponentsUtils/Generic.styles";
 
 export const ProjectsSectionComp = styled.section`
   margin: 5rem auto;
 `;
 
-export const ProjectsHeaderEle = styled.h1`
-  font-size: 4rem;
-  display: flex;
-  justify-content: center;
-`;
+export const ProjectsHeaderEle = styled(GenericH1)``;
 
 export const ProjectsDetailsEle = styled.div`
   display: flex;
@@ -16,6 +13,10 @@ export const ProjectsDetailsEle = styled.div`
   column-gap: 2rem;
   flex-wrap: wrap;
   margin: 2rem auto;
+
+  @media (max-width: 767px) {
+    margin: 2rem 1rem;
+  }
 `;
 
 // Project Individual Component
@@ -42,12 +43,20 @@ export const ProjectIndComp = styled.div`
 
   h3 {
     font-size: 2rem;
+
+    @media (max-width: 767px) {
+      font-size: 1.5rem;
+    }
   }
 
   .details {
     display: flex;
     align-items: flex-start;
     text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 0.85rem;
+    }
   }
 
   .link {
