@@ -84,8 +84,8 @@ const HomeSMIcTag = styled.a`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background: transparent;
   border: 2px solid #0ef;
   border-radius: 50%;
@@ -120,6 +120,8 @@ const HomeSMIcTag = styled.a`
 
   @media (max-width: 767px) { 
     font-size: 1rem;
+    width: 2rem;
+  height: 2rem;
   }
 `;
 
