@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { GenericH1 } from "../../StyledComponentsUtils/Generic.styles";
 
 export const EducationSectionComp = styled.section`
   margin: 2rem auto;
@@ -20,12 +21,7 @@ export const ESpanAnimate = styled.span`
   animation-delay: ${(props) => 0.5 * props.$timing}s;
 `;
 
-export const EducationHeader = styled.h1`
-  font-size: 4rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
-`;
+export const EducationHeader = styled(GenericH1)``;
 
 export const EducationTimelineBox = styled.div`
   flex: 1 1 75vw;
@@ -35,6 +31,10 @@ export const EducationTimelineBox = styled.div`
   padding-left: 2rem; // check left of timeline content if this is changed
   border-left: 2px solid #0ef;
   position: relative;
+
+  @media (max-width: 767px) {
+    max-width: 90vw;
+  }
 `;
 
 export const EducationTimelineContent = styled.div`
@@ -66,6 +66,10 @@ export const EContent = styled.div`
     color: #0ef;
     font-size: 1rem;
 
+    @media (max-width: 767px) {
+      font-size: 0.9rem;
+    }
+
     i {
       color: #0ef;
       margin-right: 0.5rem;
@@ -74,13 +78,25 @@ export const EContent = styled.div`
 
   h3 {
     font-size: 1.75rem;
+
+    @media (max-width: 767px) {
+      font-size: 1.25rem;
+    }
   }
 
   h4 {
     font-size: 1.25rem;
+
+    @media (max-width: 767px) {
+      font-size: 1rem;
+    }
   }
 
   h5 {
     font-size: 1rem;
+
+    @media (max-width: 767px) {
+      font-size: 0.85rem;
+    }
   }
 `;

@@ -24,7 +24,7 @@ const Home = () => {
     },
     {
       name: "LinkedIn",
-      link: "https://in.linkedin.com/",
+      link: "https://www.linkedin.com/in/ankit-r-02b83a168/",
       icon: "linkedin",
     },
     {
