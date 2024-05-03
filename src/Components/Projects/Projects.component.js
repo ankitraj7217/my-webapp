@@ -26,6 +26,18 @@ const Projects = () => {
         "https://github.com/ankitraj7217/khelotsu-client",
         "https://github.com/ankitraj7217/khelotsu-server",
       ],
+      webLink: "https://khelotsu.netlify.app/"
+    },
+    {
+      name: "Whizzy Quiz",
+      details: `A platform aimed at enhancing users’ proficiency in software development. The platform enables users
+      to engage in practice sessions, evaluate their performance, access detailed explanations, and review topics they struggled with,
+      facilitating iterative improvement through multiple attempts.`,
+      codeLink: [
+        "https://github.com/ankitraj7217/whizzyquiz-client",
+        "https://github.com/ankitraj7217/whizzyquiz-server",
+      ],
+      webLink: "https://whizzyquiz.netlify.app/"
     },
     {
       name: "SO Assistant Bot",
@@ -62,6 +74,16 @@ const Projects = () => {
                   </a>
                 ))}
               </div>
+              {ele?.webLink && <div className="link">
+                <span>Website Link: </span>
+                <a
+                  href={ele?.webLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Link
+                </a>
+              </div>}
             </ProjectIndComp>
           );
         })}

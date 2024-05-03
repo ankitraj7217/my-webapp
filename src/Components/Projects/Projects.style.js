@@ -31,7 +31,7 @@ export const ProjectIndComp = styled.div`
   max-width: 480px;
   background: linear-gradient(to bottom, #3c1642, #8f2d56);
   color: #ffffff;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
   padding: 1rem;
   border-radius: 0.5rem;
 
