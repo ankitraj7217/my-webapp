@@ -53,7 +53,7 @@ const Home = () => {
             <Typewriter
               words={[
                 "Software Engineer",
-                "Otaku",
+                "Competitive Coder",
                 "IR Enthusiast",
                 "Traveller",
               ]}
